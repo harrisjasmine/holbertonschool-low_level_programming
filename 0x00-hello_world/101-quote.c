@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -7,4 +8,13 @@
  */
 int main(void)
 {
+	int length_of_quote = sizeof(
+		"and that piece of art is useful\" - Dora Korpar, 2015-10-19"
+	);
+	write(
+		2,
+		"and that piece of art is useful\" - Dora Korpar, 2015-10-19",
+		length_of_quote
+	);
+	return (1);
 }
