@@ -12,9 +12,9 @@ int main(void)
 
 	while (current_ascii_number <= last_ascii_number)
 	{
-		current_ascii_number++;
-
 		putchar((char) current_ascii_number);
+
+		current_ascii_number++;
 	}
 
 	current_ascii_number = 65;
@@ -22,9 +22,9 @@ int main(void)
 
 	while (current_ascii_number <= last_ascii_number)
 	{
-		current_ascii_number++;
-
 		putchar((char) current_ascii_number);
+
+		current_ascii_number++;
 	}
 
 	putchar('\n');
