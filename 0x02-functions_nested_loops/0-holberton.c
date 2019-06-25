@@ -2,7 +2,7 @@
 
 /**
  * main - prints Holberton
- *
+ * @void: voided parameter
  * Return: (0) is successful
  *
  */
