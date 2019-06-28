@@ -2,7 +2,8 @@
 
 /**
  * print_alphabet - function to print alphabet
- * Return: Always void.
+ * @void: no parameters
+ * Return: Always void
  */
 
 void print_alphabet(void)
