@@ -9,15 +9,15 @@ void print_rev(char *s)
 {
 	int a;
 
-	if (*s == "")
-	{
-		_putchar('\n');
-		return;
-	}
-
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		;
+	}
+
+	if (a == 0)
+	{
+		_putchar('\n');
+		return;
 	}
 
 	for (; a >= 0; a--)
