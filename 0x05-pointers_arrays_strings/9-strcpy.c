@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * *_strcpy - function that copies the string pointed to by src
+ * _strcpy - function that copies the string pointed to
  * @dest: pointer to string
- * @scr:: pointer to string
+ * @src: pointer to string
  * Return: return char
  */
 
