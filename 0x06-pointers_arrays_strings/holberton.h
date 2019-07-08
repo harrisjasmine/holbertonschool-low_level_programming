@@ -20,4 +20,6 @@ char *cap_string(char *b);
 char *leet(char *b);
 
 char *rot13(char *);
+
+void print_number(int n);
 #endif /* HOLBERTON_H */
