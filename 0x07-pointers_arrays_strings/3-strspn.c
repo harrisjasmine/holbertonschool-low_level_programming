@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * _strspn - function that gets the length of a prefix substring
+ * @s: initial string passed in to be compared
+ * @accept:  secondary string compared against the first
+ * Return: sum of the bytes in the string
  */
 
 unsigned int _strspn(char *s, char *accept)
