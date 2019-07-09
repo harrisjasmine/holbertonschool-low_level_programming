@@ -5,6 +5,7 @@
  * @n: number of bytes of info to copy
  * @src: area copied from
  * @dest: area copie to
+ * Return: pointer to dest
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
@@ -14,9 +15,9 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	for (; src <= end; src++)
 	{
-		*dest = *src;
-				dest++;
+		*beggining = *src;
+				beggining++;
 	}
 
-	return (beggining);
+	return (dest);
 }
