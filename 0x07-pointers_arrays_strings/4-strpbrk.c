@@ -9,4 +9,17 @@
 
 char *_strpbrk(char *s, char *accept)
 {
+	char *start;
+
+	for (; *s != '\0'; s++)
+	{
+		for (start = accept; *start != '\0'; start++)
+		{
+			if (*s == *start)
+			{
+				return (s);
+			}
+		}
+	}
+	return ('\0');
 }
