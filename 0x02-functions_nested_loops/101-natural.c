@@ -9,9 +9,9 @@
 void print_sum(int n)
 {
 	int i;
-	int mul35;
-	int mul3;
-	int mul5;
+	int mul35 = 15;
+	int mul3 = 3;
+	int mul5 = 5;
 	int sum;
 
 	for (i = 0; i < n; i++)
