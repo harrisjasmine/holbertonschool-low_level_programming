@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _print_rev_recursion(char *s)
+ * _print_rev_recursion - function that prints string in reverse
  * @s: pointer to string being passed through
  */
 
