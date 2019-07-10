@@ -33,7 +33,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			if (*start != '\0')
 			{
-				return (needle);
+				return (haystack);
 			}
 		}
 	}
