@@ -10,7 +10,7 @@
 void print_diagsums(int *a, int size)
 {
 	int square = size * size;
-	int i,j;
+	int i, j;
 	int sum1 = 0;
 	int sum2 = 0;
 
