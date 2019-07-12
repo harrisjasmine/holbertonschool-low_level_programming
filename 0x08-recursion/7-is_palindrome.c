@@ -29,6 +29,8 @@ int check(char *start, char *end)
 		check((start + 1), (end - 1));
 		return (1);
 	}
+	else if (*start == '\0' || *end == '\0')
+		return (1);
 	else
 		return (0);
 }
