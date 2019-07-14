@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -c *.c | ar -cvq liball.a *.o
+gcc -Wall -c *.c | ar -rc liball.a *.o
