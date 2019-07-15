@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		int sum;
 		int first_number = atoi(argv[1]);
-		int second_number = atoi (argv[2]);
+		int second_number = atoi(argv[2]);
 
 		sum = first_number * second_number;
 		printf("%d\n", sum);
