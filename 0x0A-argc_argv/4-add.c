@@ -6,9 +6,9 @@
 
 
 /**
- * checkdigit - check if a char is a number
- * @num: number checked
- * Return: 0 if not a digit. 1 if is a digit
+ * checkifdigit - check if a char is a number.
+ * @num: number to be checked.
+ * Return: 0 if not a digit. 1 if is a digit.
  */
 
 int checkifdigit(char *num)
@@ -22,10 +22,10 @@ int checkifdigit(char *num)
 }
 
 /**
- * main - function adds positive numbers
- * @argc: number of arguments
+ * main - adds positive numbers.
+ * @argc: number of arguments.
  * @argv: vector of strings passed to program.
- * Return: 1 if digit is passed. 0 if no number is passed
+ * Return: 1 if 1 digi is passed. 0 if no number is passed.
  */
 
 int main(int argc, char *argv[])
