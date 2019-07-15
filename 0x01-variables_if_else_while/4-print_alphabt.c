@@ -7,14 +7,14 @@
 
 int main(void)
 {
-	int first_number = 97;
-	int last_number = 122;
+	int first_number = 'a';
+	int last_number = 'z';
 
 	while (first_number <= last_number)
 	{
-		if (first_number != 101 && first_number != 113)
+		if (first_number != 'e' && first_number != 'q')
 		{
-			putchar((char) first_number);
+			putchar(first_number);
 		}
 
 		first_number++;
