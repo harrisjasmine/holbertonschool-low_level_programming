@@ -33,6 +33,11 @@ char *str_concat(char *s1, char *s2)
 	char *catbeg;
 	int totallength;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	totallength = _strlen(s1) + _strlen(s2);
 
 	cats1s2 = (char *)malloc((totallength + 1) * sizeof(char));
