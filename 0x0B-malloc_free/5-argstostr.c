@@ -33,6 +33,7 @@ char *argstostr(int ac, char **av)
 	catarg = (char *)malloc(sum * sizeof(char));
 		if (catarg == NULL)
 			return (NULL);
+
 	sum = 0;
 	for (k = 0; k < ac; k++)
 	{
@@ -44,7 +45,6 @@ char *argstostr(int ac, char **av)
 		catarg[sum] = '\n';
 		sum++;
 	}
-	catarg[sum] = '\0';
 
 	return (catarg);
 }
