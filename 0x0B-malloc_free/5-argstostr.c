@@ -16,6 +16,11 @@ char *argstostr(int ac, char **av)
 	int i, j, k, l;
 	int sum = 0;
 
+	if (ac == 0)
+		return (NULL);
+	if (av == NULL)
+		return (NULL);
+
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[j] != '\0'; j++)
@@ -26,6 +31,8 @@ char *argstostr(int ac, char **av)
 	sum = sum + ac + 1;
 
 	catarg = (char *)malloc(sum * sizeof(char));
+		if (catarg == NULL)
+			return (NULL);
 	sum = 0;
 	for (k = 0; k < ac; k++)
 	{
