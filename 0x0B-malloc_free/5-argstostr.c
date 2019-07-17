@@ -28,9 +28,9 @@ char *argstostr(int ac, char **av)
 			sum = sum + 1;
 		}
 	}
-	sum = sum + ac + 1;
+	sum = sum + ac;
 
-	catarg = (char *)malloc(sum * sizeof(char));
+	catarg = (char *)malloc(sum + 1 * sizeof(char));
 		if (catarg == NULL)
 			return (NULL);
 
