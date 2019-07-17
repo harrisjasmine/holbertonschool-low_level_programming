@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 	}
 	sum = sum + ac;
 
-	catarg = (char *)malloc(sum + 1 * sizeof(char));
+	catarg = (char *)malloc((sum + 1) * sizeof(char));
 		if (catarg == NULL)
 			return (NULL);
 
