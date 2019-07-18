@@ -76,7 +76,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	total_sum = str1sum + str2sum + 1;
 	concatstr = malloc(sizeof(char) * total_sum);
-
+		if (concatstr == NULL)
+			return (NULL);
 	for (l = 0, concatcounter = 0; l < str1sum; l++, concatcounter++)
 		concatstr[concatcounter] = s1[l];
 
