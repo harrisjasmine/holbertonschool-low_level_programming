@@ -17,18 +17,20 @@ int main(void)
 			for (l = '0'; l <= '9'; l++)
 			{
 				if (i != j)
-					if (j != l)
-						if (i != l)
-							if (i < j)
-								if (j < l)
-								{
-									putchar(i);
-									putchar(j);
-									putchar(l);
-									if (i < '7')
-										putchar(',');
-										putchar(' ');
-								}
+				if (j != l)
+				if (i != l)
+				if (i < j)
+				if (j < l)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(l);
+					if (i < '7')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
 		}
 	}
