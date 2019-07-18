@@ -9,21 +9,23 @@
 void print_sum(int n)
 {
 	int i;
-	int mul35 = 15;
-	int mul3 = 3;
-	int mul5 = 5;
+	int mul35 = 0;
+	int mul3 = 0;
+	int mul5 = 0;
 	int sum;
 
 	for (i = 0; i < n; i++)
 	{
-		if (n % 3 == 0 && n % 5 == 0)
+		if (n % 3 == 0 || n % 5 == 0)
+		{
 			mul35 += n;
-		if (n % 3 == 0)
-			mul3 += n;
-		if (n % 5 == 0)
-			mul5 += n;
-		sum = mul35 + mul3 + mul5;
+			if (n % 3 == 0)
+				mul3 += n;
+			if (n % 5 == 0)
+				mul5 += n;
+		}
 	}
+	sum = mul35 + mul3 + mul5;
 
 	printf("%d\n", sum);
 }
