@@ -17,7 +17,9 @@ int main(void)
 	for (i = 0; i < 48; i++)
 	{
 		sum = num1 + num2;
-		printf("%lu, ", sum);
+		printf("%lu", sum);
+		if (i != 47)
+			printf(", ");
 		num1 = num2;
 		num2 = sum;
 	}
