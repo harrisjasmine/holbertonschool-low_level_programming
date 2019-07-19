@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
-5  * print_sum - prints the sum of 3 and 5 multiples of 1024
-6  * @n: number to print sum of mul of 3 and 5
-7  */
+* main - prints the sum of 3 and 5 multiples of 1024
+*
+* Return: 0 if successful
+*/
 
 int main(void)
 {
