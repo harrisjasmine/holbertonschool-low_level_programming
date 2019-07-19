@@ -4,8 +4,8 @@
 
 /**
  * array_range - function that creates an array of integers
- * @min:
- * @max:
+ * @min: number of min
+ * @max: number of max
  *
  * Return:
  */
