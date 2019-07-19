@@ -6,26 +6,23 @@
 6  * @n: number to print sum of mul of 3 and 5
 7  */
 
-void print_sum(int n)
+int main(void)
 {
 	int i;
-	int mul35 = 0;
-	int mul3 = 0;
-	int mul5 = 0;
 	int sum;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < 1024; i++)
 	{
-		if (n % 3 == 0 || n % 5 == 0)
-		{
-			mul35 += n;
-			if (n % 3 == 0)
-				mul3 += n;
-			if (n % 5 == 0)
-				mul5 += n;
-		}
+		if (i % 3 == 0 && i % 5 == 0)
+			sum = sum + 1;
+		else if (i % 3 == 0)
+			sum = sum + 1;
+		else if (i % 5 == 0)
+			sum = sum + 1;
+		else
+			continue;
 	}
-	sum = mul35 + mul3 + mul5;
-
 	printf("%d\n", sum);
+
+	return (0);
 }
