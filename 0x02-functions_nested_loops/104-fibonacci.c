@@ -13,11 +13,11 @@ int main(void)
 	double num2 = 2;
 	double sum;
 
-	printf("%lu, %lu, ", num1, num2);
+	printf("%lf, %lf, ", num1, num2);
 	for (i = 0; i < 96; i++)
 	{
 		sum = num1 + num2;
-		printf("%lu", sum);
+		printf("%lf", sum);
 		if (i != 95)
 			printf(", ");
 		num1 = num2;
