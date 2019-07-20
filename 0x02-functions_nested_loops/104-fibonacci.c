@@ -9,9 +9,9 @@
 int main(void)
 {
 	int i;
-	unsigned long num1 = 1;
-	unsigned long num2 = 2;
-	unsigned long sum;
+	double num1 = 1;
+	double num2 = 2;
+	double sum;
 
 	printf("%lu, %lu, ", num1, num2);
 	for (i = 0; i < 96; i++)
