@@ -1,5 +1,7 @@
-#ifndef ABS
-#define ABS(x) ((x<0)?(-x):(x))
+#ifndef 3_FUNCTION_LIKE_MACRO_H
+#define 3_FUNCTION_LIKE_MACRO_H
+
+#define ABS(x) (((x) < 0) ? (-(x)) : (x))
 #include <stdio.h>
 
-#endif /* ABS(x) */
+#endif /* 3_FUNCTION_LIKE_MACRO_H */
