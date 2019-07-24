@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
+ * int_index - function that searches for an integer
+ * @array: pointer to array passed in
+ * @size: size of array
+ * @cmp: pointer to function
+ * Return: index of match or -1 if no match
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -17,7 +19,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		for (i = 0; i < size; i++)
 		{
 			if (cmp(array[i]) != 0)
-					return (i);
+				return (i);
 		}
 			return (-1);
 	}
