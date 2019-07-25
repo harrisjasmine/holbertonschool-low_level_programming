@@ -3,14 +3,12 @@
 /**
  * print_number - function that prints an integer
  * @n: number passed in to print
- *
- *
  */
 
 void print_number(int n)
 {
-	int m;
-	int rem;
+	unsigned int m;
+	unsigned int rem;
 
 	if (n < 0)
 	{
