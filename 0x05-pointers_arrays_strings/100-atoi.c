@@ -28,7 +28,7 @@ int _atoi(char *s)
 			}
 			if (s[i] == '-')
 			{
-				dash_count ++;
+				dash_count++;
 			}
 		}
 	}
