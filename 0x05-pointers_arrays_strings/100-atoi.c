@@ -1,36 +1,40 @@
 #include "holberton.h"
-#include <limits.h>
-#include <stdio.h>
 
 /**
  * _atoi - converts a string to an integer, pulls integer and its sign.
  * @s: string to be evaluated.
- * Return: integer with its sign.
+ * Return: integer with its sign
  */
-
-
 
 int _atoi(char *s)
 {
-	unsigned int i, numfound = 0, negcounter = 0, finalint = 0;
+	int dash_count = 0;
+	int num_started = 0;
+	int number = 0;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (; s[i] != '\0'; i++)
 	{
-		if (s[i] == '-')
-			negcounter++;
-		else if (s[i] >= '0' && s[i] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			finalint = finalint * 10 + (s[i] - '0');
-			numfound = 1;
+			num_started = 1;
+			number = number * 10 - (s[i] + '0');
 		}
-		else if (numfound == 1)
-			break;
+		else
+		{
+			if (num_started == 1)
+			{
+				break;
+			}
+			if (s[i] == '-')
+			{
+				dash_count ++;
+			}
+		}
 	}
-	if (negcounter % 2 == 0)
-		return (finalint);
-
-	else if (negcounter % 2 != 0)
-		return (-finalint);
-	else
-		return (0);
+	if (dash_count % 2 == 0)
+	{
+		return (-number);
+	}
+	return (number);
 }

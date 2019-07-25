@@ -24,4 +24,6 @@ void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 
 void reverse_array(int *a, int n);
+
+int _atoi(char *s);
 #endif /* HOLBERTON_H */
