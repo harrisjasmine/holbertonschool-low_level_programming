@@ -5,7 +5,6 @@
  * c_func - function that prints characters
  * @args: character passed into function
  */
-
 void c_func(va_list args)
 {
 	printf("%c", (char) va_arg(args, int));
@@ -15,7 +14,6 @@ void c_func(va_list args)
  * i_func - function that prints integers
  * @args: integer passed into function
  */
-
 void i_func(va_list args)
 {
 	printf("%d", va_arg(args, int));
@@ -25,7 +23,6 @@ void i_func(va_list args)
  * f_func - function for a float
  * @args: float passed into the function
  */
-
 void f_func(va_list args)
 {
 	printf("%f", (float) va_arg(args, double));
@@ -35,7 +32,6 @@ void f_func(va_list args)
  * s_func - function to print strings
  * @args: string passed into function
  */
-
 void s_func(va_list args)
 {
 	char *s = va_arg(args, char *);
@@ -64,37 +60,41 @@ typedef struct pall
 
 void print_all(const char * const format, ...)
 {
+	va_list args;
+
 	p_t pall[] = {
 		{"c", c_func},
 		{"i", i_func},
 		{"f", f_func},
 		{"s", s_func},
-		{NULL, NULL},
 	};
 	int i = 0;
 	int j = 0;
-	va_list args;
 
 	va_start(args, format);
 
-	while (format[j])
+	while (format != '\0' && format[j] != 0)
 	{
 		i = 0;
 		while (i < 4)
 		{
-			if (pall[i].type[0] == format[j])
+			if (*pall[i].type == format[j])
 			{
 				(pall[i].f)(args);
-				if (format[j + 1] != '\0')
-					printf(", ");
+
 				break;
 			}
+
+			if (format[j + 1] != '\0')
+				printf(", ");
+
 			i++;
 		}
+
 		j++;
 	}
 
-	printf('\n');
+	printf("\n");
 
 	va_end(args);
 }
