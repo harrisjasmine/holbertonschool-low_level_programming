@@ -1,3 +1,4 @@
+#include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
 
@@ -43,17 +44,6 @@ void s_func(va_list args)
 }
 
 /**
- * struct pall - structure for printing different data types
- * @type: data type passed in
- * @f: appropriate function
- */
-typedef struct pall
-{
-	char *type;
-	void (*f)(va_list);
-} p_t;
-
-/**
  * print_all - function that prints everything
  * @format: list of types of arguments passed to function
  */
@@ -70,6 +60,8 @@ void print_all(const char * const format, ...)
 	};
 	int i = 0;
 	int j = 0;
+	char *sep;
+	sep = "";
 
 	va_start(args, format);
 
@@ -80,13 +72,10 @@ void print_all(const char * const format, ...)
 		{
 			if (*pall[i].type == format[j])
 			{
+				printf("%s", sep);
 				(pall[i].f)(args);
-
-				break;
+				sep = ", ";
 			}
-
-			if (format[j + 1] != '\0')
-				printf(", ");
 
 			i++;
 		}
