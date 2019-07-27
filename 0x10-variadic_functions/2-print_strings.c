@@ -33,9 +33,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				print_string = va_arg(args, char *);
 				if (print_string == NULL)
-					 printf("(nil)");
+					printf("(nil)");
 				else
-				printf("%s", print_string);
+					printf("%s", print_string);
 			}
 		}
 		printf("\n");
