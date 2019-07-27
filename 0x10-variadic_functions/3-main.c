@@ -8,5 +8,7 @@
 int main(void)
 {
 	print_all("ceis", 'H', 0, "lberton");
+	print_all("ceis", 'H', 0, "lberton");
+	print_all("sics", "booger", 3, 'H', "lberton");
 	return (0);
 }

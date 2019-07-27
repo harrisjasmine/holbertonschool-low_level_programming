@@ -10,17 +10,14 @@ void print_most_numbers(void)
 	int current_ascii_number = 48;
 	int last_ascii_number = 58;
 
-	while (current_ascii_number < last_ascii_number)
+	for(; current_ascii_number < last_ascii_number; current_ascii_number++)
 	{
 		if (current_ascii_number == 50 || current_ascii_number == 52)
 		{
-			current_ascii_number++;
 			continue;
 		}
 
 		_putchar((char) current_ascii_number);
-
-		current_ascii_number++;
 	}
 
 	_putchar('\n');

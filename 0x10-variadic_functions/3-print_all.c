@@ -1,7 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-
 /**
  * c_func - function that prints characters
  * @args: character passed into function
@@ -94,7 +93,8 @@ void print_all(const char * const format, ...)
 		}
 		j++;
 	}
-	printf("\n");
+
+	printf('\n');
 
 	va_end(args);
 }

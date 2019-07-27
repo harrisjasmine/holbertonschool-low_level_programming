@@ -48,11 +48,11 @@ int _islower(int c)
 char *rot13(char *s)
 {
 	int base;
-	char* beginning = s;
+	char *beginning = s;
 
-	while(*s != '\0')
+	while (*s != '\0')
 	{
-		while(_isalpha(*s))
+		while (_isalpha(*s))
 		{
 			if (_islower(*s))
 			{
