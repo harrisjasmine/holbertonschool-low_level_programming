@@ -1,9 +1,5 @@
 #include <stdio.h>
 #include <stdargs.h>
-#include <stdio.h>
-#include <stdargs.h>
-#include <stdio.h>
-#include <stdargs.h>
 
 /**
  * print_strings - function that prints strings, followed by a new line
@@ -29,15 +25,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				print_string = va_arg(args, char *);
 				if (print_string == NULL)
-					printf("(nil)%s ", separator);
+					printf("(nil)%s", separator);
 				else
-					printf("%s%s ", print_string, separator);
+					printf("%s%s", print_string, separator);
 			}
 			else
 			{
 				print_string = va_arg(args, char *);
 				if (print_string == NULL)
-					 printf("(nil)\n");
+					 printf("(nil)");
 				else
 				printf("%s", print_string);
 			}
