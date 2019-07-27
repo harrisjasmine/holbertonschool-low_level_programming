@@ -64,6 +64,7 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	int j = 0;
 	char *sep;
+
 	sep = "";
 
 	va_start(args, format);
