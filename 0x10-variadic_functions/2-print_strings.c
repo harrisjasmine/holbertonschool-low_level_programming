@@ -15,27 +15,26 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(args, n);
 
-	if (separator)
+	if (separator == NULL)
+		separator = "";
+
 		for (i = 0; i < n ; i++)
 		{
 			if (i < n - 1)
 			{
-				value = va_arg(args,const unsigned int);
-				printf("%d%s ", value, separator);
+				print_string = va_arg(args, char *);
+				if (print_string == NULL)
+					printf("(nil)%s ", separator);
+				else
+					printf("%s%s ", print_string, separator);
 			}
 			else
 			{
-				value = va_arg(args, const unsigned int);
-				printf("%d\n", value);
+				print_string = va_arg(args, char *);
+				if (print_string == NULL)
+					 printf("(nil)\n");
+				else
+				printf("%s\n", print_string);
 			}
 		}
-	if (separator == NULL)
-	{
-		for (i = 0; i < n ; i++)
-		{
-			value = va_arg(args,const unsigned int);
-			printf("%d ", value);
-		}
-		printf("\n");
-	}
 }
