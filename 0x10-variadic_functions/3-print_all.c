@@ -1,4 +1,6 @@
-#include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdio.h>
+
 
 /**
  * c_func - function that prints characters
@@ -44,6 +46,17 @@ void s_func(va_list args)
 	else
 		printf("%s", s);
 }
+
+/**
+ * struct pall - structure for printing different data types
+ * @type: data type passed in
+ * @f: appropriate function
+ */
+typedef struct pall
+{
+	char *type;
+	void (*f)(va_list);
+} p_t;
 
 /**
  * print_all - function that prints everything
